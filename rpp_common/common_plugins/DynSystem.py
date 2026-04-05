@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from rpp_common.py.RPP_Plugin import RPP_Plugin
+from rpp_common import RPP_Plugin
 import numpy as np
 from types import SimpleNamespace
 

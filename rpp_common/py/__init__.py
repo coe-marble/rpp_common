@@ -9,6 +9,7 @@ from .descriptors import (
     RegistryInfo,
 )
 
+
 __all__ = [
     "RPP_Plugin",
     "ParameterDescription",
@@ -18,4 +19,5 @@ __all__ = [
     "RegistryInfo",
     "IOArgument",
     "DataModel",
+    "get_plugin_base_fully_specified_class_name",
 ]
