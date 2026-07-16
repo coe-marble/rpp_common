@@ -31,6 +31,7 @@ class ParameterDescription:
 
 
 ParamDescriptor = ParameterDescription
+Parameter = ParameterDescription
 
 
 def ParamSet(*items: ParameterDescription) -> list[ParameterDescription]:
