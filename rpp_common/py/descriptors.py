@@ -5,33 +5,12 @@ from types import SimpleNamespace
 from typing import Any, Callable
 
 
-@dataclass
 class ParameterDescription:
-    name: str
-    default_value: Any = 0
-    type: Any = None
-    description: str = ""
-    is_valid: bool = True
-    serialize: bool = True
+    
+    def __init__(self, name: str, default_value: Any):
+        self.name = name
+        self.default_value = default_value
 
-    def __getitem__(self, key):
-        if key == "Name":
-            return self.name
-        if key == "DefaultValue":
-            return self.default_value
-        if key == "Type":
-            return self.type
-        if key == "Description":
-            return self.description
-        if key == "IsValid":
-            return self.is_valid
-        if key == "Serialize":
-            return self.serialize
-        raise KeyError(f"Key {key} not found in ParameterDescription")
-
-
-ParamDescriptor = ParameterDescription
-Parameter = ParameterDescription
 
 
 def ParamSet(*items: ParameterDescription) -> list[ParameterDescription]:

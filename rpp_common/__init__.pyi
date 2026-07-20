@@ -4,7 +4,6 @@ from .py.descriptors import (
     IOArgument as IOArgument,
     LogEntry as LogEntry,
     ParameterDescription as ParameterDescription,
-    ParamDescriptor as ParamDescriptor,
     ParamSet as ParamSet,
     RegistryInfo as RegistryInfo,
 )

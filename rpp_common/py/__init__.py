@@ -4,7 +4,6 @@ from .descriptors import (
     IOArgument,
     LogEntry,
     ParameterDescription,
-    ParamDescriptor,
     ParamSet,
     RegistryInfo,
 )
@@ -13,7 +12,6 @@ from .descriptors import (
 __all__ = [
     "RPP_Plugin",
     "ParameterDescription",
-    "ParamDescriptor",
     "ParamSet",
     "LogEntry",
     "RegistryInfo",
