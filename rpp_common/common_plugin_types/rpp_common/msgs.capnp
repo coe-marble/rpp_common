@@ -38,6 +38,16 @@ struct Twist3D {
     angular @1 :Point3D;
 }
 
+struct Odometry2D {
+    pose @0 :Pose2D;
+    twist @1 :Twist2D;
+}
+
+struct Odometry3D {
+    pose @0 :Pose3D;
+    twist @1 :Twist3D;
+}
+
 struct Command {
     data @0 :List(Float64);
 }
