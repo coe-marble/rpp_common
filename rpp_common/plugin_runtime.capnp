@@ -6,6 +6,7 @@ interface PluginRuntime {
   ping @0 ();
   shutdown @1 ();
   listAdapters @2 () -> (adapters :List(AdapterInfo));
+  getComponentCapability @3 (name :Text) -> (pluginRef :Capability);
 }
 
 struct AdapterInfo {
