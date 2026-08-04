@@ -38,6 +38,16 @@ struct Twist3D {
     angular @1 :Point3D;
 }
 
+struct Wrench2D {
+    force @0 :Point2D;
+    torque @1 :Float64;
+}
+
+struct Wrench3D {
+    force @0 :Point3D;
+    torque @1 :Point3D;
+}
+
 struct Odometry2D {
     pose @0 :Pose2D;
     twist @1 :Twist2D;
