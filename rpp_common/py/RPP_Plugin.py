@@ -12,6 +12,9 @@ class RPP_Plugin(ABC):
     input_description = []
     output_description = []
 
+    def reset(self):
+        pass
+
     def initialize(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)

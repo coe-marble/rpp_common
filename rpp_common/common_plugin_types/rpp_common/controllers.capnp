@@ -4,7 +4,6 @@ using Anot = import "rpp_common/anot.capnp";
 
 interface Controller(RefState, State, Enabler, Command) {
   step     @0 (ref_state: RefState, state :State, enabler :Enabler, dt :Float64) -> (command :Command);
-  reset    @1 ();
 }
 
 struct Enabler2D {
