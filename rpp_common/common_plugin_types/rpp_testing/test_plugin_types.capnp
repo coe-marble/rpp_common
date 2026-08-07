@@ -19,3 +19,27 @@ $Anot.plugin("DisturbanceGenerator2D"){}
 
 interface MotionController2D extends(Controller(Msgs.Odometry2D, Msgs.VectorPlanar))
 $Anot.plugin("MotionController2D"){}
+
+
+struct TestStruct1 {
+    x @0 :Float64;
+    y @1 :Float64;
+    theta @2 :Float64;
+}
+
+struct TestStruct2 {
+    linear @0 :Float64;
+    angular @1 :Float64;
+    struct1 @2 :TestStruct1;
+}
+
+interface TestInterfaceAll $Anot.plugin("test") {
+  funcEmpty @0 () -> ();
+  funcWithSimpleParams @1 (paramFloat :Float64, paramBool :Bool) -> (resultFloat :Float64);
+  funcWithStructParam @2 (paramStruct1 :TestStruct1, paramStruct2 :TestStruct2) -> (resultStruct1 :TestStruct1);
+  funcWithListParam @3 (paramListFloat :List(Float64), paramListStruct :List(TestStruct1)) -> (resultList :List(Float64));
+  funcWithListOfStructParam @4 (paramListStruct :List(TestStruct1)) -> (resultListStruct2 :List(TestStruct2));
+  funcWithMultipleSimpleReturns @5 () -> (resultFloat :Float64, resultBool :Bool);
+  funcWithMultipleStructReturns @6 () -> (resultStruct1 :TestStruct1, resultStruct2 :TestStruct2);
+  funcWithMultipleListReturns @7 () -> (resultListFloat :List(Float64), resultListStruct :List(TestStruct1));
+}
