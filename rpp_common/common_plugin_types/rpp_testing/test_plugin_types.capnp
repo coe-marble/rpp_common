@@ -11,6 +11,8 @@ interface Controller(State, Command) {
 interface DisturbanceGenerator(State) {
   step     @0 (state :State, dt :Float64) -> (state_disturbed :State);
   validate @1 (state :State) -> (ok :Bool);
+  setData @2 (data :Data) -> (ok :Bool);
+  getData @3 () -> (data :Data);
 }
 
 interface DisturbanceGenerator2D extends(DisturbanceGenerator(Msgs.Pose2D))
