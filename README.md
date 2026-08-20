@@ -1,12 +1,6 @@
 # rpp_common
 
-Common Python interfaces shared by RPP projects.
+Common interfaces shared by RPP projects.
 
-This package provides:
+Implements common plugin types for RPP plugin instantiation and component management.
 
-
-Install in editable mode from this folder:
-
-```bash
-pip install -e .
-```
