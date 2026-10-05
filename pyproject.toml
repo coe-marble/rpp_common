@@ -1,3 +1,15 @@
 [build-system]
-requires = ["setuptools>=64"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpp_common"
+version = "0.1.0"
+description = "Common RPP plugin interfaces and description types"
+dependencies = ["numpy"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["rpp_common", "rpp_common.*"]
