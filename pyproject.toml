@@ -6,10 +6,16 @@ build-backend = "setuptools.build_meta"
 name = "rpp_common"
 version = "0.1.0"
 description = "Common RPP plugin interfaces and description types"
-dependencies = ["numpy"]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
 
 [tool.setuptools]
 include-package-data = true
+
+[tool.setuptools.package-data]
+rpp_common = ["*.capnp", "common_plugin_types/**/*.capnp"]
 
 [tool.setuptools.packages.find]
 include = ["rpp_common", "rpp_common.*"]
