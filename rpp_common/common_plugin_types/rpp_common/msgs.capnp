@@ -62,6 +62,14 @@ struct Command {
     data @0 :List(Float64);
 }
 
+# Dense row-major matrix used for numeric component handover state. An empty
+# matrix has zero rows, zero columns, and no values.
+struct FloatMatrix {
+    rows @0 :UInt32;
+    columns @1 :UInt32;
+    values @2 :List(Float64);
+}
+
 struct VectorPlanar {
     x @0 :Float64;
     y @1 :Float64;

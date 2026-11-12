@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rpp_common"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Common RPP plugin interfaces and description types"
 requires-python = ">=3.10"
 
@@ -13,6 +13,9 @@ test = ["pytest>=8,<9"]
 
 [tool.setuptools]
 include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "rpp_common.__version__"}
 
 [tool.setuptools.package-data]
 rpp_common = ["*.capnp", "common_plugin_types/**/*.capnp"]
