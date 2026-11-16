@@ -1,9 +1,10 @@
 # rpp_common
 
-Shared RPP contracts and data definitions used by both runtimes. This package
-contains the common Cap'n Proto schemas and the language-neutral Python
-`ParameterDescription` and `ParamSet` helpers used in plugin declarations.
+Shared Cap'n Proto contracts, data definitions, and parameter declarations for RPP.
 
-It is a runtime dependency of the registrator and the Python runtime; install
-it with the rest of the `rpp_dev` checkout rather than in isolation.
+Documentation is maintained in `rpp_docs`:
 
+- [Plugin types and interfaces](../../rpp_docs/docs/plugins-and-plugin-types.md).
+- [System architecture](../../rpp_docs/docs/architecture.md).
+
+[Read the guide on GitHub](https://github.com/coe-marble/rpp_docs/blob/develop/docs/plugins-and-plugin-types.md).
